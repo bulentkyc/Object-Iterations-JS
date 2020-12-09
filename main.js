@@ -44,6 +44,17 @@ console.log(dataSet.data[4].name);
 console.log(dataSet.data[5].name);
  */
 console.log('----- for in -------');
+/* for-in
+Syntax: for(variable in array||object){
+    Code
+}
+
+variable will have key of the current one
+
+For-in assigns key or index into the variable that you create inside for-in parentheses
+If you wish to get value you should write a js command with the key like: line 61
+*/
+
 
 for (const keys in dataSet) {
     console.log(keys);
@@ -56,7 +67,20 @@ for (const key in dataSet.data) {
     console.log(dataSet.data[key].name)
 }
 
-console.log('---------for of ---');
+
+console.log('---------for of ---------');
+
+/* for-of
+Syntax: for(variable of array){
+    Code
+}
+
+variable will have value of current element
+
+For-of assigns the value of the array into the variable that you create inside for-of parentheses
+HRADS-UP: This does not work with objects
+*/
+
 for (const el of dataSet.data) {
     console.log(el.name);
 }
@@ -65,8 +89,8 @@ for (let index = 0; index < dataSet.data.length; index++) {
     console.log(dataSet.data[index].name);
 }
 
-console.log('----||||ERROR||||------');
-
+console.log('-----||||ERROR||||------');
+//HRADS-UP: This does not work with objects
 for (const el of dataSet) {
     console.log(el);
 }
